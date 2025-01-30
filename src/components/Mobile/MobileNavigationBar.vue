@@ -15,22 +15,22 @@
     >
       <q-list>
         <q-item clickable to="#award">
-          <q-item-section>AWARD-WINNING</q-item-section>
+          <q-item-section><div class="text-body1">AWARD-WINNING</div></q-item-section>
         </q-item>
         <q-item clickable to="#portrait">
-          <q-item-section>PORTRAITS</q-item-section>
+          <q-item-section><div class="text-body1">PORTRAITS</div></q-item-section>
         </q-item>
         <q-item clickable to="#festivals">
-          <q-item-section>FESTIVALS</q-item-section>
+          <q-item-section><div class="text-body1">FESTIVALS</div></q-item-section>
         </q-item>
         <q-item clickable to="#scenes">
-          <q-item-section>SCENES</q-item-section>
+          <q-item-section><div class="text-body1">SCENES</div></q-item-section>
         </q-item>
         <q-item clickable to="#scenes">
-          <q-item-section>FLAVORS</q-item-section>
+          <q-item-section><div class="text-body1">FLAVORS</div></q-item-section>
         </q-item>
         <q-item clickable to="#scenes">
-          <q-item-section>DOCUMENTARIES</q-item-section>
+          <q-item-section><div class="text-body1">DOCUMENTARIES</div></q-item-section>
         </q-item>
       </q-list>
     </q-drawer>
