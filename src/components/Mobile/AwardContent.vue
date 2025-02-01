@@ -7,14 +7,31 @@
       <q-splitter
         v-model="splitterModel"
         horizontal
-        class="bg-black q-mb-xl q-mt-md"
+        class="bg-black q-mb-sm q-mt-md"
         style="height: 1px; width: 40%"
       ></q-splitter>
     </div>
-
+    <div class="col flex justify-center items-center q-pb-md">
+      <transition name="fade" mode="out-in">
+        <div class="text-center" :key="slide">
+          <span class="text-h6 text-weight-bold text-uppercase q-mr-sm">{{
+            dynamicText.title
+          }}</span>
+          <span class="text-body2 text-weight-bold text-uppercase">{{ dynamicText.year }}</span>
+          <div class="column">
+            <span class="text-caption text-weight-light" style="line-height: 1">{{
+              dynamicText.event
+            }}</span>
+            <span class="text-caption text-uppercase text-weight-light" style="line-height: 1">{{
+              dynamicText.category
+            }}</span>
+          </div>
+        </div>
+      </transition>
+    </div>
     <div class="row" style="height: fit-content">
       <div class="col">
-        <div class="q-pa-md q-ml-xl">
+        <div>
           <q-carousel arrows animated swipeable v-model="slide" thumbnails infinite height="682px">
             <q-carousel-slide :name="1" img-src="/img/sandurot-2023.png" />
             <q-carousel-slide :name="2" img-src="/img/catch-a-moment.png" />
@@ -25,20 +42,7 @@
         </div>
       </div>
 
-      <div class="col-5 flex justify-center items-center">
-        <transition name="fade" mode="out-in">
-          <div class="column text-center" :key="slide">
-            <span class="text-h2 text-weight-bold text-uppercase">{{ dynamicText.title }}</span>
-            <span class="text-h5 text-weight-bold text-uppercase">{{ dynamicText.year }}</span>
-            <span class="text-h6 text-weight-light text-uppercase" style="line-height: 1">{{
-              dynamicText.event
-            }}</span>
-            <span class="text-h6 text-weight-light text-uppercase" style="line-height: 1">{{
-              dynamicText.category
-            }}</span>
-          </div>
-        </transition>
-      </div>
+      <!--  -->
     </div>
   </div>
 </template>
@@ -88,7 +92,7 @@ const dynamicText = computed(() => slideData[slide.value - 1])
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 .fade-enter,
 .fade-leave-to {
